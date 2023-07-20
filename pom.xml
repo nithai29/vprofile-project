@@ -172,6 +172,10 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.2.11.v20150529</version>
                 <configuration>
+		    <argLine>
+                        --add-opens=java.base/java.lang=ALL-UNNAMED
+                        --add-opens=java.base/java.util=ALL-UNNAMED
+                    </argLine>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                     <webApp>
                         <contextPath>/</contextPath>
